@@ -1060,7 +1060,7 @@ form label {
     font-size: 20px;
     background: #fff;
     padding: 20px;
-    color: rgba(160, 102, 127, 0.8);
+    color: rgba(119, 35, 71, 0.8);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -1083,7 +1083,7 @@ form label {
 }
 .couple-half h3 {
     font-family: "Sacramento", Arial, serif;
-    color: rgba(160, 102, 127, 0.8);
+    color: rgba(119, 35, 71, 0.8);
     font-size: 30px;
 }
 .couple-half .groom,
@@ -1204,7 +1204,7 @@ form label {
     margin-bottom: 10px;
     line-height: 1.5;
     font-weight: bold;
-    color: rgba(160, 102, 127, 0.8);
+    color: rgba(119, 35, 71, 0.8);
     font-family: "Sacramento", Arial, serif;
 }
 @media screen and (max-width: 768px) {
