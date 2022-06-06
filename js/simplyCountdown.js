@@ -97,7 +97,6 @@
                 seconds: createCountdownElt(countdown, parameters, "simply-seconds-section"),
             };
         }
-
         spanTag = document.createElement("span");
         spanTag.classList.add(parameters.inlineClass);
         return spanTag;
