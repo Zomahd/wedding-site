@@ -301,6 +301,7 @@ figure {
 .fh5co-video:hover .overlay {
     background: rgba(0, 0, 0, 0.7);
 }
+
 .fh5co-video:hover a {
     position: relative;
     -webkit-transform: scale(1.2);
@@ -317,6 +318,7 @@ figure {
     position: relative;
     width: 100%;
 }
+
 .fh5co-cover .overlay {
     z-index: 0;
     position: absolute;
@@ -326,6 +328,7 @@ figure {
     right: 0;
     background: rgba(0, 0, 0, 0.5);
 }
+
 .fh5co-cover > .fh5co-container {
     position: relative;
     z-index: 10;
