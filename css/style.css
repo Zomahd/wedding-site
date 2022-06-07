@@ -861,7 +861,7 @@ form label {
 .fh5co-cover .display-tc h2 {
     margin: 0;
     padding: 0;
-    color: white;
+    color: rgba(255, 255, 255, 0.781);
 }
 #fh5co-header .display-tc h1,
 #fh5co-counter .display-tc h1,
@@ -1205,7 +1205,7 @@ form label {
 }
 
 .fh5co-heading {
-    margin-bottom: 5em;
+    margin-bottom: 1em;
 }
 .fh5co-heading.fh5co-heading-sm {
     margin-bottom: 2em;
@@ -1218,13 +1218,18 @@ form label {
     color: rgba(119, 35, 71, 0.8);
     font-family: "Sacramento", Arial, serif;
 }
+
 @media screen and (max-width: 768px) {
     .fh5co-heading h2 {
         font-size: 40px;
     }
 }
+.fh5co-heading h3 {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.836);
+}
 .fh5co-heading p {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.5;
     color: #828282;
 }
@@ -1376,6 +1381,8 @@ form label {
 }
 #fh5co-started .fh5co-heading h2 {
     color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 2rem;
+    margin-top: -1rem;
 }
 #fh5co-started .fh5co-heading p {
     color: rgb(255, 255, 255);
@@ -1427,9 +1434,6 @@ form label {
 }
 #fh5co-started .fh5co-heading {
     margin-bottom: 30px;
-}
-#fh5co-started .fh5co-heading h2 {
-    margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
