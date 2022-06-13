@@ -179,25 +179,43 @@
         $(window).stellar();
     };
 
-    var getURLParams = function () {
-        var invites = location.search.split("invites=")[1] ? location.search.split("invites=")[1] : "";
-        console.log(invites);
+    const capitalizeWords = function (arr) {
+        return arr.map((element) => {
+            const elements = element.split(" ");
 
+            if (elements.length > 1) {
+                return elements
+                    .map((element) => {
+                        return element.charAt(0).toUpperCase() + element.slice(1);
+                    })
+                    .join(" ");
+            } else {
+                return element.charAt(0).toUpperCase() + element.substring(1).toLowerCase();
+            }
+        });
+    };
+
+    var getURLParams = function () {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
+
+        var invites = urlParams.get("invites") ? urlParams.get("invites") : "";
+        console.log(invites);
+
         var dressCode = urlParams.get("c") ? urlParams.get("c") : "true";
+        console.log(dressCode);
 
-        const arr = invites.split("-");
+        const arrInvites = capitalizeWords(invites.replaceAll("_", " ").split("-"));
 
-        for (var i = 0; i < arr.length; i++) {
-            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+        for (var i = 0; i < arrInvites.length; i++) {
+            arrInvites[i] = arrInvites[i].charAt(0).toUpperCase() + arrInvites[i].slice(1);
         }
 
-        if (arr.length === 1 && arr[0] === "Tito") {
+        if (arrInvites.length === 1 && arrInvites[0] === "Tito") {
             document.querySelector(".invitesContainer").innerHTML =
-                "<label class='rainbow-text'>" + arr[0] + "</label>";
+                "<label class='rainbow-text'>" + arrInvites[0] + "</label>";
         } else {
-            document.querySelector(".invitesContainer").innerHTML = arr.join("<br>");
+            document.querySelector(".invitesContainer").innerHTML = arrInvites.join("<br>");
         }
 
         if (dressCode === "f") {
