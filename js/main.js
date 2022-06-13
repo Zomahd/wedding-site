@@ -183,6 +183,10 @@
         var invites = location.search.split("invites=")[1] ? location.search.split("invites=")[1] : "";
         console.log(invites);
 
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        var dressCode = urlParams.get("c") ? urlParams.get("c") : "true";
+
         const arr = invites.split("-");
 
         for (var i = 0; i < arr.length; i++) {
@@ -194,6 +198,10 @@
                 "<label class='rainbow-text'>" + arr[0] + "</label>";
         } else {
             document.querySelector(".invitesContainer").innerHTML = arr.join("<br>");
+        }
+
+        if (dressCode === "f") {
+            document.querySelector(".dressCode").remove();
         }
     };
 
